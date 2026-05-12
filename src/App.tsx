@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'motion/react';
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, useCallback } from 'react';
 import { Calendar, MapPin, Clock, Heart, Music, Sparkles, Volume2, VolumeX, Bird, Flower2 } from 'lucide-react';
 
 // --- Sub-components ---
@@ -505,13 +505,99 @@ const RoyalDecorativeSection = () => {
 export default function App() {
   const { scrollYProgress } = useScroll();
   const [isPlaying, setIsPlaying] = useState(false);
+  const [hasEntered, setHasEntered] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  // Toggle audio playback
+  useEffect(() => {
+    if (!audioRef.current) return;
+    if (isPlaying) {
+      audioRef.current.play().catch(() => {});
+    } else {
+      audioRef.current.pause();
+    }
+  }, [isPlaying]);
+
+  // User taps "Enter" — start audio + preloader simultaneously
+  const handleEnter = useCallback(() => {
+    setHasEntered(true);
+    setIsPlaying(true);
+  }, []);
+
+  const handlePreloaderComplete = useCallback(() => {
+    setIsLoading(false);
+  }, []);
 
   return (
-    <AnimatePresence>
-      {isLoading ? (
-        <Preloader key="preloader" onComplete={() => setIsLoading(false)} />
-      ) : (
+    <>
+      {/* Audio element always mounted so it persists across all phases */}
+      <audio
+        ref={audioRef}
+        src="/Alaipayuthey Marriage Song Ringtone.mp3"
+        loop
+        preload="auto"
+        style={{ display: 'none' }}
+      />
+
+      <AnimatePresence>
+        {!hasEntered ? (
+          /* ── Elegant Splash Screen ── */
+          <motion.div
+            key="splash"
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="fixed inset-0 z-[1100] flex flex-col items-center justify-center cursor-pointer bg-white"
+            onClick={handleEnter}
+          >
+            {/* Subtle radial glow */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#FFF5EE_0%,#FFFFFF_70%)]" />
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+              className="relative z-10 text-center px-8"
+            >
+              <div className="flex justify-center gap-4 text-gold/40 mb-8">
+                <div className="w-12 h-px bg-current self-center" />
+                <Heart size={14} className="text-rose/50" />
+                <div className="w-12 h-px bg-current self-center" />
+              </div>
+
+              <h2 className="text-luxury text-3xl md:text-5xl italic font-serif leading-tight mb-6">
+                You're Invited
+              </h2>
+
+              <p className="text-wine/30 tracking-[0.6em] uppercase text-[9px] font-bold mb-16">
+                Ramasubramanian & Mallika Priyadharshini
+              </p>
+
+              <motion.div
+                animate={{ y: [0, 6, 0] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                className="inline-flex flex-col items-center gap-3"
+              >
+                <div className="w-12 h-12 rounded-full border border-wine/15 flex items-center justify-center group-hover:border-wine/30 transition-colors">
+                  <Music size={18} className="text-wine/40" />
+                </div>
+                <span className="text-[9px] tracking-[0.5em] uppercase text-wine/30 font-display">
+                  Tap to Begin
+                </span>
+              </motion.div>
+            </motion.div>
+
+            {/* Corner petals */}
+            <div className="absolute top-6 left-6 opacity-10 mix-blend-multiply">
+              <img src={petalImg} alt="" className="w-8 h-8 rotate-45" />
+            </div>
+            <div className="absolute bottom-6 right-6 opacity-10 mix-blend-multiply">
+              <img src={petalImg} alt="" className="w-8 h-8 -rotate-45" />
+            </div>
+          </motion.div>
+        ) : isLoading ? (
+          <Preloader key="preloader" onComplete={handlePreloaderComplete} />
+        ) : (
         <motion.div
           key="main-content"
           initial={{ opacity: 0 }}
@@ -519,6 +605,7 @@ export default function App() {
           transition={{ duration: 1 }}
           className="relative min-h-[400vh] bg-white selection:bg-rose/30 scroll-smooth"
         >
+
           <SakuraDecor />
           <FallingPetals />
 
@@ -537,7 +624,12 @@ export default function App() {
             onClick={() => setIsPlaying(!isPlaying)}
             className="fixed bottom-6 right-6 md:bottom-12 md:right-12 z-[70] p-3 md:p-4 border border-white/60 bg-white/40 backdrop-blur-xl rounded-full text-wine hover:bg-rose hover:text-white hover:border-transparent transition-colors group shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]"
           >
-            {isPlaying ? <Volume2 size={24} /> : <VolumeX size={24} />}
+            <span className="relative flex items-center justify-center">
+              {isPlaying ? <Volume2 size={24} /> : <VolumeX size={24} />}
+              {isPlaying && (
+                <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-rose animate-pulse" />
+              )}
+            </span>
           </motion.button>
 
           {/* Main Content */}
@@ -849,5 +941,6 @@ export default function App() {
         </motion.div>
       )}
     </AnimatePresence>
+    </>
   );
 }
