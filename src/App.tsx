@@ -9,8 +9,7 @@ import branchTL from './assets/sakura-branch-tl.png';
 import branchBR from './assets/sakura-branch-br.png';
 import preloaderBg from './assets/preloader-bg.png';
 import coupleImg from './assets/couple.png';
-import expandingImg from './assets/image.png';
-import sacredImg from './assets/image2.png';
+
 
 const Preloader = ({ onComplete }) => {
   const [step, setStep] = useState(0);
@@ -358,7 +357,7 @@ const EpicScrollSection = () => {
         >
           <motion.img
             style={{ scale: imageScale, filter: blur }}
-            src={expandingImg}
+            src={coupleImg}
             alt="Wedding Moment"
             className="w-full h-full object-cover object-center"
           />
@@ -1051,7 +1050,7 @@ export default function App() {
                 <ScrollReveal>
                   <div className="aspect-[3/4] max-w-md mx-auto rounded-t-full overflow-hidden border-4 border-white shadow-2xl group">
                     <img
-                      src={sacredImg}
+                      src={coupleImg}
                       alt="Wedding Moment"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                     />
