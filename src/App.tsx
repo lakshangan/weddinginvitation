@@ -542,58 +542,211 @@ export default function App() {
 
       <AnimatePresence>
         {!hasEntered ? (
-          /* ── Elegant Splash Screen ── */
+          /* ── Cinematic Splash Screen ── */
           <motion.div
             key="splash"
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="fixed inset-0 z-[1100] flex flex-col items-center justify-center cursor-pointer bg-white"
-            onClick={handleEnter}
+            exit={{ opacity: 0, scale: 1.05 }}
+            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+            className="fixed inset-0 z-[1100] flex flex-col items-center justify-center overflow-hidden"
           >
-            {/* Subtle radial glow */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#FFF5EE_0%,#FFFFFF_70%)]" />
-
+            {/* Full-bleed background with slow Ken Burns */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-              className="relative z-10 text-center px-8"
+              initial={{ scale: 1.15, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 8, ease: [0.33, 1, 0.68, 1] }}
+              className="absolute inset-0 z-0"
             >
-              <div className="flex justify-center gap-4 text-gold/40 mb-8">
-                <div className="w-12 h-px bg-current self-center" />
-                <Heart size={14} className="text-rose/50" />
-                <div className="w-12 h-px bg-current self-center" />
-              </div>
-
-              <h2 className="text-luxury text-3xl md:text-5xl italic font-serif leading-tight mb-6">
-                You're Invited
-              </h2>
-
-              <p className="text-wine/30 tracking-[0.6em] uppercase text-[9px] font-bold mb-16">
-                Ramasubramanian & Mallika Priyadharshini
-              </p>
-
-              <motion.div
-                animate={{ y: [0, 6, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                className="inline-flex flex-col items-center gap-3"
-              >
-                <div className="w-12 h-12 rounded-full border border-wine/15 flex items-center justify-center group-hover:border-wine/30 transition-colors">
-                  <Music size={18} className="text-wine/40" />
-                </div>
-                <span className="text-[9px] tracking-[0.5em] uppercase text-wine/30 font-display">
-                  Tap to Begin
-                </span>
-              </motion.div>
+              <img src={preloaderBg} alt="" className="w-full h-full object-cover" />
             </motion.div>
 
-            {/* Corner petals */}
-            <div className="absolute top-6 left-6 opacity-10 mix-blend-multiply">
-              <img src={petalImg} alt="" className="w-8 h-8 rotate-45" />
+            {/* Layered overlays for depth */}
+            <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/30 to-white/70 z-[1]" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_40%,transparent_0%,rgba(255,255,255,0.5)_100%)] z-[2]" />
+
+            {/* Floating sparkles */}
+            <div className="absolute inset-0 z-[3] pointer-events-none">
+              {[...Array(8)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: [0, 0.6, 0],
+                    y: [0, -60 - Math.random() * 40],
+                    x: [0, (Math.random() - 0.5) * 30],
+                  }}
+                  transition={{
+                    duration: 3 + Math.random() * 2,
+                    repeat: Infinity,
+                    delay: i * 0.6,
+                    ease: "easeInOut"
+                  }}
+                  className="absolute"
+                  style={{
+                    left: `${15 + Math.random() * 70}%`,
+                    top: `${30 + Math.random() * 40}%`,
+                  }}
+                >
+                  <Sparkles size={8 + Math.random() * 10} className="text-gold/60" />
+                </motion.div>
+              ))}
             </div>
-            <div className="absolute bottom-6 right-6 opacity-10 mix-blend-multiply">
-              <img src={petalImg} alt="" className="w-8 h-8 -rotate-45" />
+
+            {/* Top ornamental border */}
+            <motion.div
+              initial={{ scaleX: 0, opacity: 0 }}
+              animate={{ scaleX: 1, opacity: 1 }}
+              transition={{ duration: 2, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent z-[5]"
+            />
+            <motion.div
+              initial={{ scaleX: 0, opacity: 0 }}
+              animate={{ scaleX: 1, opacity: 1 }}
+              transition={{ duration: 2, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent z-[5]"
+            />
+
+            {/* Main content */}
+            <div className="relative z-10 text-center px-8 max-w-xl flex flex-col items-center">
+
+              {/* Ornamental top motif */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.5, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                className="mb-8"
+              >
+                <div className="flex items-center gap-3 text-gold/50">
+                  <div className="w-8 md:w-16 h-px bg-gradient-to-r from-transparent to-current" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-gold/40" />
+                  <div className="w-6 md:w-10 h-px bg-current" />
+                  <Heart size={12} className="text-rose/60" fill="currentColor" />
+                  <div className="w-6 md:w-10 h-px bg-current" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-gold/40" />
+                  <div className="w-8 md:w-16 h-px bg-gradient-to-l from-transparent to-current" />
+                </div>
+              </motion.div>
+
+              {/* Subtitle */}
+              <motion.p
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.2, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                className="text-wine/40 tracking-[0.5em] md:tracking-[0.8em] uppercase text-[8px] md:text-[10px] font-display mb-6"
+              >
+                You Are Cordially Invited
+              </motion.p>
+
+              {/* Main heading */}
+              <motion.h1
+                initial={{ opacity: 0, y: 25, filter: 'blur(8px)' }}
+                animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                transition={{ duration: 1.8, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
+                className="text-luxury text-4xl md:text-6xl lg:text-7xl leading-[1.15] mb-3"
+              >
+                Ramasubramanian
+              </motion.h1>
+
+              {/* Ampersand */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
+                animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                transition={{ duration: 1.5, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                className="my-2 md:my-4"
+              >
+                <span className="text-gold/70 italic text-3xl md:text-5xl font-serif">&</span>
+              </motion.div>
+
+              {/* Bride name */}
+              <motion.h1
+                initial={{ opacity: 0, y: 25, filter: 'blur(8px)' }}
+                animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                transition={{ duration: 1.8, delay: 1.4, ease: [0.22, 1, 0.36, 1] }}
+                className="text-luxury text-4xl md:text-6xl lg:text-7xl leading-[1.15] mb-8"
+              >
+                Mallika Priyadharshini
+              </motion.h1>
+
+              {/* Date line */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.2, delay: 1.8, ease: [0.22, 1, 0.36, 1] }}
+                className="flex items-center gap-4 md:gap-6 text-wine/40 tracking-[0.3em] uppercase text-[9px] md:text-xs mb-12 md:mb-16"
+              >
+                <span>May 13, 2026</span>
+                <span className="w-1 h-1 rounded-full bg-gold/40" />
+                <span>Thoothukudi</span>
+              </motion.div>
+
+              {/* CTA Button */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.2, delay: 2.2, ease: [0.22, 1, 0.36, 1] }}
+                className="relative"
+              >
+                {/* Pulsing glow ring behind button */}
+                <motion.div
+                  animate={{
+                    scale: [1, 1.4, 1],
+                    opacity: [0.3, 0, 0.3],
+                  }}
+                  transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute inset-0 rounded-full border border-rose/30 pointer-events-none"
+                />
+                <motion.div
+                  animate={{
+                    scale: [1, 1.7, 1],
+                    opacity: [0.15, 0, 0.15],
+                  }}
+                  transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                  className="absolute inset-0 rounded-full border border-gold/20 pointer-events-none"
+                />
+
+                <motion.button
+                  onClick={handleEnter}
+                  whileHover={{ scale: 1.05, backgroundColor: 'rgba(74, 4, 4, 1)', color: '#FFFAF0' }}
+                  whileTap={{ scale: 0.95 }}
+                  className="relative flex items-center gap-3 md:gap-4 px-8 md:px-10 py-4 md:py-5 rounded-full border-2 border-wine/20 text-wine bg-white/60 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_40px_rgba(74,4,4,0.15)] transition-all duration-500 cursor-pointer group"
+                >
+                  {/* Sound wave equalizer icon */}
+                  <div className="flex items-end gap-[3px] h-4">
+                    {[0.6, 1, 0.4, 0.8, 0.5].map((h, i) => (
+                      <motion.div
+                        key={i}
+                        animate={{ scaleY: [h, 1, h] }}
+                        transition={{
+                          duration: 0.6 + i * 0.1,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: i * 0.08,
+                        }}
+                        className="w-[2px] md:w-[2.5px] bg-current rounded-full origin-bottom"
+                        style={{ height: '100%' }}
+                      />
+                    ))}
+                  </div>
+                  <span className="text-[10px] md:text-xs tracking-[0.4em] uppercase font-display font-bold">
+                    Open Invitation
+                  </span>
+                  <Sparkles size={14} className="opacity-40 group-hover:opacity-80 transition-opacity" />
+                </motion.button>
+              </motion.div>
             </div>
+
+            {/* Bottom petal accents */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.15 }}
+              transition={{ duration: 2, delay: 1 }}
+              className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-6 mix-blend-multiply z-[5]"
+            >
+              <img src={petalImg} alt="" className="w-6 h-6 rotate-[30deg]" />
+              <div className="w-16 h-px bg-gold/30" />
+              <img src={petalImg} alt="" className="w-5 h-5 -rotate-[20deg]" />
+              <div className="w-16 h-px bg-gold/30" />
+              <img src={petalImg} alt="" className="w-6 h-6 rotate-[60deg] -scale-x-100" />
+            </motion.div>
           </motion.div>
         ) : isLoading ? (
           <Preloader key="preloader" onComplete={handlePreloaderComplete} />
