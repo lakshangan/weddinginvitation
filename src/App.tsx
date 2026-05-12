@@ -663,7 +663,7 @@ export default function App() {
                 transition={{ duration: 1.8, delay: 1.4, ease: [0.22, 1, 0.36, 1] }}
                 className="text-luxury text-4xl md:text-6xl lg:text-7xl leading-[1.15] mb-8"
               >
-                Mallika Priyadharshini
+                Malliga Priyadharshini
               </motion.h1>
 
               {/* Date line */}
@@ -817,7 +817,7 @@ export default function App() {
                         transition={{ duration: 2, ease: [0.16, 1, 0.3, 1] }}
                         className="text-luxury text-5xl md:text-[7rem] leading-tight"
                       >
-                        Balaji
+                        Ramasubramanian
                       </motion.h1>
                     </div>
 
@@ -840,7 +840,7 @@ export default function App() {
                         transition={{ duration: 2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                         className="text-luxury text-5xl md:text-[7rem] leading-tight"
                       >
-                        Akshaya
+                        Malliga Priyadharshini
                       </motion.h1>
                     </div>
 
@@ -858,13 +858,13 @@ export default function App() {
                 className="flex flex-col items-center space-y-6 z-20 px-6"
               >
                 <div className="flex flex-col md:flex-row items-center gap-4 md:gap-12 text-wine/80 font-light tracking-[0.3em] md:tracking-[0.5em] uppercase text-sm md:text-2xl text-center">
-                  <span>June 4, 2026</span>
+                  <span>May 13, 2026</span>
                   <span className="hidden md:block w-1.5 h-1.5 rounded-full bg-gold/50" />
                   <span className="md:hidden w-8 h-px bg-gold/30" />
-                  <span>7:30 AM</span>
+                  <span>7:00 PM</span>
                 </div>
                 <div className="text-[10px] md:text-sm tracking-[0.4em] uppercase text-wine/40 font-sans text-center">
-                  Chidambaram
+                  Thoothukudi
                 </div>
               </motion.div>
             </section>
@@ -878,9 +878,9 @@ export default function App() {
                     <h2 className="text-display text-4xl text-wine mb-12 tracking-[0.3em] uppercase">Artistic Union</h2>
                   </div>
                   <p className="text-serif text-2xl md:text-4xl leading-relaxed text-wine/80 font-light italic px-8">
-                    With the blessings of our elders and the grace of the Almighty,
+                    "With the blessings of the Almighty, the engagement ceremony of our beloved children has been arranged."
                     <br /><br />
-                    we cordially invite you along with your family and friends to grace the auspicious wedding ceremony of M. Balaji & R. Akshaya and make the occasion memorable with your presence.
+                    We cordially invite you and your family to grace the occasion and bless the couple as they begin their journey together.
                   </p>
                   <div className="w-16 h-px bg-gold/30 mx-auto mt-16" />
                 </div>
@@ -895,21 +895,21 @@ export default function App() {
               <ScrollReveal>
                 <div className="p-8 md:p-12 border border-white/60 bg-white/40 backdrop-blur-xl rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]">
                   <h3 className="text-luxury text-2xl md:text-3xl mb-8">The Groom's Side</h3>
-                  <p className="text-wine text-xl font-bold mb-4">M. Balaji, B.E., Civil & Structural Engineering</p>
+                  <p className="text-wine text-xl font-bold mb-4">K.S.K. Ramasubramanian, B.Com</p>
                   <div className="space-y-6 text-wine/70 text-sm leading-relaxed">
                     <div>
                       <p className="uppercase tracking-widest text-[10px] opacity-60 mb-2">Parents</p>
-                      <p className="text-base">Mr. R. Radhakrishnan & Mrs. Kalaivani Radhakrishnan</p>
-                      <p className="text-xs italic mt-1">From Sirkazhi</p>
+                      <p className="text-base">Mr. K.S. Kalimuthu Achari & Mrs. Murugalakshmi</p>
                     </div>
-                    <div>
-                      <p className="uppercase tracking-widest text-[10px] opacity-60 mb-2">Proprietor of</p>
-                      <ul className="list-disc list-inside opacity-90 space-y-1">
-                        <li>Murugan Textile</li>
-                        <li>Black Spade</li>
-                        <li>Altitude Menswear</li>
-                        <li>Retro Menswear</li>
-                      </ul>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <p className="uppercase tracking-widest text-[10px] opacity-60 mb-2">Paternal Grandparents</p>
+                        <p>Late Mr. K. Subbaiah Achari & Mrs. Meenakshi Ammal (Sankarankovil)</p>
+                      </div>
+                      <div>
+                        <p className="uppercase tracking-widest text-[10px] opacity-60 mb-2">Maternal Grandparents</p>
+                        <p>Late Mr. P. Ramasamy Achari & Mrs. Sellammal (Kovilpatti)</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -918,16 +918,21 @@ export default function App() {
               <ScrollReveal>
                 <div className="p-8 md:p-12 border border-white/60 bg-white/40 backdrop-blur-xl rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]">
                   <h3 className="text-luxury text-2xl md:text-3xl mb-8">The Bride's Side</h3>
-                  <p className="text-wine text-xl font-bold mb-4">R. Akshaya, M.B.A.</p>
+                  <p className="text-wine text-xl font-bold mb-4">S. Malliga Priyadharshini, M.Sc</p>
                   <div className="space-y-6 text-wine/70 text-sm leading-relaxed">
                     <div>
                       <p className="uppercase tracking-widest text-[10px] opacity-60 mb-2">Parents</p>
-                      <p className="text-base">Late Mr. R. Murugan Naidu & Mrs. Rajalakshmi Murugan</p>
-                      <p className="text-xs italic mt-1">From Chidambaram</p>
+                      <p className="text-base">Mr. S. Chermakumar & Mrs. S. Padmavathi</p>
                     </div>
-                    <div>
-                      <p className="uppercase tracking-widest text-[10px] opacity-60 mb-2">Specialization</p>
-                      <p className="text-base opacity-90">Finance with Business Analytics</p>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <p className="uppercase tracking-widest text-[10px] opacity-60 mb-2">Paternal Grandparents</p>
+                        <p>Mr. A. Paul Achari & Mrs. Malliga Ammal (Udangudi)</p>
+                      </div>
+                      <div>
+                        <p className="uppercase tracking-widest text-[10px] opacity-60 mb-2">Maternal Grandparents</p>
+                        <p>Mr. M. Shanmugavel Achari & Mrs. Vijayalakshmi Ammal (Coimbatore)</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -940,10 +945,10 @@ export default function App() {
                 <div className="h-full border border-white/60 p-8 md:p-12 bg-white/40 backdrop-blur-xl rounded-[2rem] md:rounded-tr-[5rem] md:rounded-bl-[5rem] shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] group hover:bg-white/50 transition-all duration-700">
                   <Calendar className="text-wine mb-8 w-10 h-10 opacity-30 group-hover:opacity-100 transition-opacity" />
                   <h3 className="text-display text-[10px] tracking-[0.5em] text-wine/40 mb-8 uppercase">Ceremony Date</h3>
-                  <p className="text-serif text-5xl mb-4 text-wine font-light uppercase">June 4</p>
-                  <p className="text-serif text-lg text-wine/60 italic font-serif">Thursday, 2026</p>
+                  <p className="text-serif text-5xl mb-4 text-wine font-light uppercase">May 13</p>
+                  <p className="text-serif text-lg text-wine/60 italic font-serif">Wednesday, 2026</p>
                   <div className="mt-8 pt-8 border-t border-gold/10 text-[10px] uppercase tracking-widest text-wine/40 leading-loose">
-                    Wedding Ceremony
+                    Tamil Year: Parabhava<br />Month: Chithirai<br />Star: Uthirattathi
                   </div>
                 </div>
               </ScrollReveal>
@@ -952,10 +957,10 @@ export default function App() {
                 <div className="h-full border border-white/60 p-8 md:p-12 bg-white/40 backdrop-blur-xl rounded-[2rem] md:rounded-tl-[5rem] md:rounded-br-[5rem] shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] group hover:bg-white/50 transition-all duration-700">
                   <Clock className="text-wine mb-8 w-10 h-10 opacity-30 group-hover:opacity-100 transition-opacity" />
                   <h3 className="text-display text-[10px] tracking-[0.5em] text-wine/40 mb-8 uppercase">Auspicious Time</h3>
-                  <p className="text-serif text-5xl mb-4 text-wine font-light uppercase">7:30 AM</p>
-                  <p className="text-serif text-lg text-wine/60 italic font-serif">to 9:00 AM</p>
+                  <p className="text-serif text-5xl mb-4 text-wine font-light uppercase">7:00 PM</p>
+                  <p className="text-serif text-lg text-wine/60 italic font-serif">Vrischika Lagnam</p>
                   <div className="mt-8 pt-8 border-t border-gold/10 text-[10px] uppercase tracking-widest text-wine/40 leading-loose">
-                    Auspicious Timing
+                    Thithi: Dwadashi<br />Yogam: Siddha Yogam<br />Between 7:00 - 8:15 PM
                   </div>
                 </div>
               </ScrollReveal>
@@ -964,29 +969,58 @@ export default function App() {
                 <div className="h-full border border-white/60 p-8 md:p-12 bg-white/40 backdrop-blur-xl rounded-[2rem] md:rounded-tr-[5rem] md:rounded-bl-[5rem] shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] group hover:bg-white/50 transition-all duration-700">
                   <MapPin className="text-wine mb-8 w-10 h-10 opacity-30 group-hover:opacity-100 transition-opacity" />
                   <h3 className="text-display text-[10px] tracking-[0.5em] text-wine/40 mb-8 uppercase">The Venue</h3>
-                  <p className="text-serif text-4xl mb-4 text-wine font-light uppercase">RR Convention Center</p>
-                  <p className="text-serif text-sm text-wine/60 italic font-serif leading-relaxed">
-                    57/5A, Sirkali - Chidambaram Bypass Road,<br />
-                    Near Trichy Link Road,<br />
-                    Chidambaram - 608001
-                  </p>
+                  <p className="text-serif text-4xl mb-4 text-wine font-light uppercase">Bhaskaran Kalyana Mahal</p>
+                  <p className="text-serif text-lg text-wine/60 italic font-serif">V.E. Road, Thoothukudi</p>
                   <div className="mt-8 pt-8 border-t border-gold/10">
-                    <a href="https://maps.app.goo.gl/chidambaram" target="_blank" className="text-xs text-rose uppercase tracking-widest hover:underline">Get Directions</a>
+                    <a href="https://maps.app.goo.gl/tuticorin" target="_blank" className="text-xs text-rose uppercase tracking-widest hover:underline">Get Directions</a>
                   </div>
                 </div>
               </ScrollReveal>
             </section>
 
-            {/* Catering Section */}
-            <section className="py-16 md:py-32 w-full max-w-5xl mx-auto px-6 text-center relative z-20">
+            {/* Hosts Section */}
+            <section className="w-full relative py-16 md:py-32 px-6 md:px-12 bg-white/40 backdrop-blur-xl border-y border-white/60 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] max-w-7xl mx-auto rounded-[2rem] md:rounded-3xl">
+              <div className="text-center mb-12 md:mb-16">
+                <h2 className="text-luxury text-3xl md:text-4xl mb-4">Our Loving Family</h2>
+                <div className="w-24 h-px bg-gold/30 mx-auto" />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 px-2 md:px-12">
+                <div>
+                  <h4 className="text-wine font-bold uppercase tracking-[0.3em] text-xs mb-8">Groom's Representatives</h4>
+                  <ul className="space-y-4 text-wine/70 font-serif italic text-lg opacity-80">
+                    <li>K.S. Velsamy & Kuzhalvaai Mozhi</li>
+                    <li>K.S. Kalimuthu & Murugalakshmi</li>
+                    <li>K.S. Gomathinayagam & Ramalakshmi</li>
+                    <li>K.S. Marimuthu & Muthumari</li>
+                    <li>K.S. Manikandan & Sankaraselvi</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="text-wine font-bold uppercase tracking-[0.3em] text-xs mb-8">Bride's Representatives</h4>
+                  <ul className="space-y-4 text-wine/70 font-serif italic text-lg opacity-80">
+                    <li>S. Chermakumar & Padmavathi</li>
+                    <li>S. Senthil Arumugam & Vadivu Kala</li>
+                    <li>S. Balakrishnan, B.E. (COMCAST, Chennai)</li>
+                    <li>S. Sakthi Balakrishnan, B.Sc.</li>
+                    <li>S. Malliga Durga, B.E.</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            {/* Business Partners Section */}
+            <section className="py-16 md:py-24 w-full max-w-5xl mx-auto px-6 text-center relative z-20">
               <ScrollReveal>
                 <div className="p-8 md:p-12 border border-white/60 bg-white/40 backdrop-blur-xl rounded-[2rem] md:rounded-[3rem] shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]">
-                  <h4 className="text-[10px] uppercase tracking-[0.5em] text-wine/30 mb-8">Culinary Experience By</h4>
-                  <div className="flex flex-col items-center gap-4 text-wine/80 font-serif italic text-xl">
-                    <span className="text-2xl text-wine font-bold">S.R.M Catering Service</span>
-                    <span className="text-sm opacity-80 font-sans tracking-widest uppercase">Managed by: Thiru. S.P. Murugesan (Chidambaram)</span>
-                    <div className="w-12 h-px bg-gold/20 my-2" />
-                    <span className="text-sm font-sans tracking-widest">Contact: 9566713219</span>
+                  <h4 className="text-[10px] uppercase tracking-[0.5em] text-wine/30 mb-8">Special Thanks to</h4>
+                  <div className="flex flex-wrap justify-center gap-12 text-wine/60 font-serif italic text-xl">
+                    <span>Meena Jewellers</span>
+                    <span className="text-gold/30">•</span>
+                    <span>Sri Malliga Jewellers</span>
+                    <span className="text-gold/30">•</span>
+                    <span>APK Groups</span>
+                    <span className="text-gold/30">•</span>
+                    <span>Mahes Jewellers</span>
                   </div>
                 </div>
               </ScrollReveal>
@@ -1037,24 +1071,40 @@ export default function App() {
                   </div>
 
                   <div className="text-center mt-4 md:mt-0 mb-12 md:mb-20">
-                    <h2 className="text-display text-3xl md:text-5xl text-wine mb-8 md:mb-12 tracking-[0.2em] font-light uppercase italic">Balaji <Heart size={24} className="inline-block mx-4 text-rose" fill="currentColor" /> Akshaya</h2>
-                    <div className="space-y-6 text-wine/80 font-serif italic text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-                      <p>Together with our families, we joyfully invite you to celebrate our wedding ceremony.</p>
-
-                      <div className="py-8 border-y border-gold/10 space-y-2">
-                        <p className="font-sans uppercase tracking-[0.4em] text-xs font-bold text-gold">4 June 2026</p>
-                        <p className="font-sans uppercase tracking-[0.2em] text-xs">7:30 AM - 9:00 AM</p>
-                        <p className="font-sans text-sm tracking-widest mt-4">RR Convention Center, Chidambaram</p>
-                      </div>
-
-                      <p className="pt-6">We look forward to celebrating this beautiful occasion with you and your family.</p>
-
-                      <div className="pt-8">
-                        <p className="font-sans uppercase tracking-[0.6em] text-[10px] opacity-40 mb-2">With Love,</p>
-                        <p className="text-3xl font-luxury text-wine not-italic">Balaji & Akshaya</p>
-                      </div>
+                    <h2 className="text-display text-3xl md:text-5xl text-wine mb-4 md:mb-8 tracking-[0.2em] font-light uppercase">Contact Us</h2>
+                    <div className="space-y-2 text-wine/60 font-bold tracking-widest">
+                      <p>94431 24837</p>
+                      <p>94430 24226</p>
+                      <p>96293 68626</p>
                     </div>
                   </div>
+
+                  <form className="space-y-16 max-w-xl mx-auto">
+                    <input
+                      type="text"
+                      placeholder="FULL NAME"
+                      className="w-full bg-transparent border-b border-wine/10 py-6 text-xl text-center focus:outline-none focus:border-wine/40 transition-colors text-wine placeholder:text-wine/20 uppercase tracking-[0.3em] font-light"
+                    />
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                      <select className="w-full bg-transparent border-b border-wine/10 py-6 text-base text-center appearance-none cursor-pointer text-wine/80 uppercase tracking-[0.2em] font-light">
+                        <option>1 GUEST</option>
+                        <option>2 GUESTS</option>
+                        <option>FAMILY</option>
+                      </select>
+                      <select className="w-full bg-transparent border-b border-wine/10 py-6 text-base text-center appearance-none cursor-pointer text-wine/80 uppercase tracking-[0.2em] font-light">
+                        <option>ATTENDING</option>
+                        <option>REGRETFULLY ABSENT</option>
+                      </select>
+                    </div>
+
+                    <motion.button
+                      whileHover={{ backgroundColor: "#800020", color: "white" }}
+                      className="w-full border-2 border-wine/20 text-wine py-8 uppercase tracking-[0.6em] transition-all duration-700 text-xs font-bold rounded-full"
+                    >
+                      Send Blessing
+                    </motion.button>
+                  </form>
                 </div>
               </ScrollReveal>
             </section>
@@ -1063,7 +1113,7 @@ export default function App() {
             <footer className="py-24 md:py-48 w-full max-w-5xl mx-auto px-6 block text-center relative z-20">
               <ScrollReveal>
                 <div className="p-8 md:p-24 border border-white/60 bg-white/40 backdrop-blur-xl rounded-[2rem] md:rounded-[3rem] shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]">
-                  <div className="text-luxury text-2xl md:text-3xl mb-4 italic opacity-80">Balaji <br className="block md:hidden" />& Akshaya</div>
+                  <div className="text-luxury text-2xl md:text-3xl mb-4 italic opacity-80">Ramasubramanian <br className="block md:hidden" />& Malliga Priyadharshini</div>
                   <p className="text-[8px] md:text-[10px] tracking-[0.8em] md:tracking-[1.2em] text-wine/40 uppercase mb-8 ml-[0.8em] md:ml-[1.2em]">Sacred Union • Eternal Joy</p>
                   <div className="flex justify-center gap-8 md:gap-12 text-rose/40">
                     <Music size={20} />
