@@ -839,7 +839,7 @@ export default function App() {
                           transition={{ duration: 2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                           className="text-luxury text-5xl md:text-[7rem] leading-tight"
                         >
-                          Malliga Priyadharshini
+                          Mallika Priyadharshini
                         </motion.h1>
                       </div>
 
