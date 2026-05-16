@@ -512,7 +512,7 @@ export default function App() {
   useEffect(() => {
     if (!audioRef.current) return;
     if (isPlaying) {
-      audioRef.current.play().catch(() => {});
+      audioRef.current.play().catch(() => { });
     } else {
       audioRef.current.pause();
     }
@@ -662,7 +662,7 @@ export default function App() {
                 transition={{ duration: 1.8, delay: 1.4, ease: [0.22, 1, 0.36, 1] }}
                 className="text-luxury text-4xl md:text-6xl lg:text-7xl leading-[1.15] mb-8"
               >
-                Malliga Priyadharshini
+                Mallika Priyadharshini
               </motion.h1>
 
               {/* Date line */}
@@ -750,399 +750,399 @@ export default function App() {
         ) : isLoading ? (
           <Preloader key="preloader" onComplete={handlePreloaderComplete} />
         ) : (
-        <motion.div
-          key="main-content"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="relative min-h-[400vh] bg-white selection:bg-rose/30 scroll-smooth"
-        >
-
-          <SakuraDecor />
-          <FallingPetals />
-
-          {/* Background Gradient Layer */}
-          <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_50%,#FFFAF0_0%,#FFFFFF_100%)] z-[-2]" />
-
-          {/* Removed old motifs and lamps */}
-
-          {/* Header Badges */}
-
-
-          {/* Audio Button */}
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={() => setIsPlaying(!isPlaying)}
-            className="fixed bottom-6 right-6 md:bottom-12 md:right-12 z-[70] p-3 md:p-4 border border-white/60 bg-white/40 backdrop-blur-xl rounded-full text-wine hover:bg-rose hover:text-white hover:border-transparent transition-colors group shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]"
+          <motion.div
+            key="main-content"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="relative min-h-[400vh] bg-white selection:bg-rose/30 scroll-smooth"
           >
-            <span className="relative flex items-center justify-center">
-              {isPlaying ? <Volume2 size={24} /> : <VolumeX size={24} />}
-              {isPlaying && (
-                <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-rose animate-pulse" />
-              )}
-            </span>
-          </motion.button>
 
-          {/* Main Content */}
-          <main className="relative flex flex-col items-center">
+            <SakuraDecor />
+            <FallingPetals />
+
+            {/* Background Gradient Layer */}
+            <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_50%,#FFFAF0_0%,#FFFFFF_100%)] z-[-2]" />
+
+            {/* Removed old motifs and lamps */}
+
+            {/* Header Badges */}
 
 
-            {/* Hero Section */}
-            <section className="min-h-[100svh] w-full flex flex-col items-center justify-between relative overflow-hidden py-24 md:py-32">
-              {/* Top Blessing */}
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.5, delay: 0.5 }}
-                className="text-wine/60 tracking-[0.3em] md:tracking-[0.8em] text-[8px] md:text-xs uppercase font-display text-center px-4 z-20"
-              >
-                With the divine blessings of the Almighty
-              </motion.div>
+            {/* Audio Button */}
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => setIsPlaying(!isPlaying)}
+              className="fixed bottom-6 right-6 md:bottom-12 md:right-12 z-[70] p-3 md:p-4 border border-white/60 bg-white/40 backdrop-blur-xl rounded-full text-wine hover:bg-rose hover:text-white hover:border-transparent transition-colors group shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]"
+            >
+              <span className="relative flex items-center justify-center">
+                {isPlaying ? <Volume2 size={24} /> : <VolumeX size={24} />}
+                {isPlaying && (
+                  <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-rose animate-pulse" />
+                )}
+              </span>
+            </motion.button>
 
-              {/* Center Names */}
-              <ParallaxSection offset={-100}>
-                <div className="flex flex-col items-center justify-center w-full px-6">
-                  <motion.div
-                    className="text-center z-10 px-8 md:px-32 py-16 md:py-24 border border-white/60 bg-white/30 backdrop-blur-xl rounded-[3rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] relative overflow-hidden"
-                  >
-                    {/* Decorative top dot */}
-                    <div className="absolute top-8 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-gold/50" />
+            {/* Main Content */}
+            <main className="relative flex flex-col items-center">
 
-                    <div className="overflow-hidden">
-                      <motion.h1
-                        initial={{ y: "100%", opacity: 0, filter: "blur(10px)" }}
-                        animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-                        transition={{ duration: 2, ease: [0.16, 1, 0.3, 1] }}
-                        className="text-luxury text-5xl md:text-[7rem] leading-tight"
-                      >
-                        Ramasubramanian
-                      </motion.h1>
-                    </div>
 
+              {/* Hero Section */}
+              <section className="min-h-[100svh] w-full flex flex-col items-center justify-between relative overflow-hidden py-24 md:py-32">
+                {/* Top Blessing */}
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1.5, delay: 0.5 }}
+                  className="text-wine/60 tracking-[0.3em] md:tracking-[0.8em] text-[8px] md:text-xs uppercase font-display text-center px-4 z-20"
+                >
+                  With the divine blessings of the Almighty
+                </motion.div>
+
+                {/* Center Names */}
+                <ParallaxSection offset={-100}>
+                  <div className="flex flex-col items-center justify-center w-full px-6">
                     <motion.div
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 0.8, duration: 1.5 }}
-                      className="relative flex items-center justify-center py-8 md:py-16"
+                      className="text-center z-10 px-8 md:px-32 py-16 md:py-24 border border-white/60 bg-white/30 backdrop-blur-xl rounded-[3rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] relative overflow-hidden"
                     >
-                      <div className="absolute left-1/2 -translate-x-1/2 w-48 md:w-96 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
-                      <span className="text-gold italic text-4xl md:text-6xl font-serif relative z-10 px-8">
-                        &
-                      </span>
-                    </motion.div>
+                      {/* Decorative top dot */}
+                      <div className="absolute top-8 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-gold/50" />
 
-                    <div className="overflow-hidden">
-                      <motion.h1
-                        initial={{ y: "100%", opacity: 0, filter: "blur(10px)" }}
-                        animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
-                        transition={{ duration: 2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                        className="text-luxury text-5xl md:text-[7rem] leading-tight"
+                      <div className="overflow-hidden">
+                        <motion.h1
+                          initial={{ y: "100%", opacity: 0, filter: "blur(10px)" }}
+                          animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                          transition={{ duration: 2, ease: [0.16, 1, 0.3, 1] }}
+                          className="text-luxury text-5xl md:text-[7rem] leading-tight"
+                        >
+                          Ramasubramanian
+                        </motion.h1>
+                      </div>
+
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.8, duration: 1.5 }}
+                        className="relative flex items-center justify-center py-8 md:py-16"
                       >
-                        Malliga Priyadharshini
-                      </motion.h1>
-                    </div>
+                        <div className="absolute left-1/2 -translate-x-1/2 w-48 md:w-96 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+                        <span className="text-gold italic text-4xl md:text-6xl font-serif relative z-10 px-8">
+                          &
+                        </span>
+                      </motion.div>
 
-                    {/* Decorative bottom dot */}
-                    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-gold/50" />
-                  </motion.div>
-                </div>
-              </ParallaxSection>
-
-              {/* Bottom Details */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.5, duration: 1.5 }}
-                className="flex flex-col items-center space-y-6 z-20 px-6"
-              >
-                <div className="flex flex-col md:flex-row items-center gap-4 md:gap-12 text-wine/80 font-light tracking-[0.3em] md:tracking-[0.5em] uppercase text-sm md:text-2xl text-center">
-                  <span>May 13, 2026</span>
-                  <span className="hidden md:block w-1.5 h-1.5 rounded-full bg-gold/50" />
-                  <span className="md:hidden w-8 h-px bg-gold/30" />
-                  <span>7:00 PM</span>
-                </div>
-                <div className="text-[10px] md:text-sm tracking-[0.4em] uppercase text-wine/40 font-sans text-center">
-                  Thoothukudi
-                </div>
-              </motion.div>
-            </section>
-
-            {/* Invitation Message */}
-            <section className="py-32 md:py-64 px-6 max-w-5xl text-center relative z-20 mx-auto">
-              <ScrollReveal>
-                <div className="p-8 md:p-24 border border-white/60 bg-white/40 backdrop-blur-xl rounded-[2rem] md:rounded-[3rem] shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]">
-                  <div className="mb-16">
-                    <div className="w-16 h-px bg-gold/30 mx-auto mb-8" />
-                    <h2 className="text-display text-4xl text-wine mb-12 tracking-[0.3em] uppercase">Artistic Union</h2>
-                  </div>
-                  <p className="text-serif text-2xl md:text-4xl leading-relaxed text-wine/80 font-light italic px-8">
-                    "With the blessings of the Almighty, the engagement ceremony of our beloved children has been arranged."
-                    <br /><br />
-                    We cordially invite you and your family to grace the occasion and bless the couple as they begin their journey together.
-                  </p>
-                  <div className="w-16 h-px bg-gold/30 mx-auto mt-16" />
-                </div>
-              </ScrollReveal>
-            </section>
-
-            <EpicScrollSection />
-            <RoyalDecorativeSection />
-
-            {/* Ancestry Section */}
-            <section className="py-16 md:py-32 w-full max-w-7xl px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 relative z-20">
-              <ScrollReveal>
-                <div className="p-8 md:p-12 border border-white/60 bg-white/40 backdrop-blur-xl rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]">
-                  <h3 className="text-luxury text-2xl md:text-3xl mb-8">The Groom's Side</h3>
-                  <p className="text-wine text-xl font-bold mb-4">K.S.K. Ramasubramanian, B.Com</p>
-                  <div className="space-y-6 text-wine/70 text-sm leading-relaxed">
-                    <div>
-                      <p className="uppercase tracking-widest text-[10px] opacity-60 mb-2">Parents</p>
-                      <p className="text-base">Mr. K.S. Kalimuthu Achari & Mrs. Murugalakshmi</p>
-                    </div>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <p className="uppercase tracking-widest text-[10px] opacity-60 mb-2">Paternal Grandparents</p>
-                        <p>Late Mr. K. Subbaiah Achari & Mrs. Meenakshi Ammal (Sankarankovil)</p>
+                      <div className="overflow-hidden">
+                        <motion.h1
+                          initial={{ y: "100%", opacity: 0, filter: "blur(10px)" }}
+                          animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+                          transition={{ duration: 2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                          className="text-luxury text-5xl md:text-[7rem] leading-tight"
+                        >
+                          Malliga Priyadharshini
+                        </motion.h1>
                       </div>
-                      <div>
-                        <p className="uppercase tracking-widest text-[10px] opacity-60 mb-2">Maternal Grandparents</p>
-                        <p>Late Mr. P. Ramasamy Achari & Mrs. Sellammal (Kovilpatti)</p>
-                      </div>
-                    </div>
+
+                      {/* Decorative bottom dot */}
+                      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-gold/50" />
+                    </motion.div>
                   </div>
-                </div>
-              </ScrollReveal>
+                </ParallaxSection>
 
-              <ScrollReveal>
-                <div className="p-8 md:p-12 border border-white/60 bg-white/40 backdrop-blur-xl rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]">
-                  <h3 className="text-luxury text-2xl md:text-3xl mb-8">The Bride's Side</h3>
-                  <p className="text-wine text-xl font-bold mb-4">S. Malliga Priyadharshini, M.Sc</p>
-                  <div className="space-y-6 text-wine/70 text-sm leading-relaxed">
-                    <div>
-                      <p className="uppercase tracking-widest text-[10px] opacity-60 mb-2">Parents</p>
-                      <p className="text-base">Mr. S. Chermakumar & Mrs. S. Padmavathi</p>
-                    </div>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <p className="uppercase tracking-widest text-[10px] opacity-60 mb-2">Paternal Grandparents</p>
-                        <p>Mr. A. Paul Achari & Mrs. Malliga Ammal (Udangudi)</p>
-                      </div>
-                      <div>
-                        <p className="uppercase tracking-widest text-[10px] opacity-60 mb-2">Maternal Grandparents</p>
-                        <p>Mr. M. Shanmugavel Achari & Mrs. Vijayalakshmi Ammal (Coimbatore)</p>
-                      </div>
-                    </div>
+                {/* Bottom Details */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.5, duration: 1.5 }}
+                  className="flex flex-col items-center space-y-6 z-20 px-6"
+                >
+                  <div className="flex flex-col md:flex-row items-center gap-4 md:gap-12 text-wine/80 font-light tracking-[0.3em] md:tracking-[0.5em] uppercase text-sm md:text-2xl text-center">
+                    <span>May 13, 2026</span>
+                    <span className="hidden md:block w-1.5 h-1.5 rounded-full bg-gold/50" />
+                    <span className="md:hidden w-8 h-px bg-gold/30" />
+                    <span>7:00 PM</span>
                   </div>
-                </div>
-              </ScrollReveal>
-            </section>
-
-            {/* Event Details Grid */}
-            <section className="py-16 md:py-32 w-full max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-3 gap-12 relative z-20">
-              <ScrollReveal>
-                <div className="h-full border border-white/60 p-8 md:p-12 bg-white/40 backdrop-blur-xl rounded-[2rem] md:rounded-tr-[5rem] md:rounded-bl-[5rem] shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] group hover:bg-white/50 transition-all duration-700">
-                  <Calendar className="text-wine mb-8 w-10 h-10 opacity-30 group-hover:opacity-100 transition-opacity" />
-                  <h3 className="text-display text-[10px] tracking-[0.5em] text-wine/40 mb-8 uppercase">Ceremony Date</h3>
-                  <p className="text-serif text-5xl mb-4 text-wine font-light uppercase">May 13</p>
-                  <p className="text-serif text-lg text-wine/60 italic font-serif">Wednesday, 2026</p>
-                  <div className="mt-8 pt-8 border-t border-gold/10 text-[10px] uppercase tracking-widest text-wine/40 leading-loose">
-                    Tamil Year: Parabhava<br />Month: Chithirai<br />Star: Uthirattathi
+                  <div className="text-[10px] md:text-sm tracking-[0.4em] uppercase text-wine/40 font-sans text-center">
+                    Thoothukudi
                   </div>
-                </div>
-              </ScrollReveal>
+                </motion.div>
+              </section>
 
-              <ScrollReveal>
-                <div className="h-full border border-white/60 p-8 md:p-12 bg-white/40 backdrop-blur-xl rounded-[2rem] md:rounded-tl-[5rem] md:rounded-br-[5rem] shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] group hover:bg-white/50 transition-all duration-700">
-                  <Clock className="text-wine mb-8 w-10 h-10 opacity-30 group-hover:opacity-100 transition-opacity" />
-                  <h3 className="text-display text-[10px] tracking-[0.5em] text-wine/40 mb-8 uppercase">Auspicious Time</h3>
-                  <p className="text-serif text-5xl mb-4 text-wine font-light uppercase">7:00 PM</p>
-                  <p className="text-serif text-lg text-wine/60 italic font-serif">Vrischika Lagnam</p>
-                  <div className="mt-8 pt-8 border-t border-gold/10 text-[10px] uppercase tracking-widest text-wine/40 leading-loose">
-                    Thithi: Dwadashi<br />Yogam: Siddha Yogam<br />Between 7:00 - 8:15 PM
-                  </div>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal>
-                <div className="h-full border border-white/60 p-8 md:p-12 bg-white/40 backdrop-blur-xl rounded-[2rem] md:rounded-tr-[5rem] md:rounded-bl-[5rem] shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] group hover:bg-white/50 transition-all duration-700">
-                  <MapPin className="text-wine mb-8 w-10 h-10 opacity-30 group-hover:opacity-100 transition-opacity" />
-                  <h3 className="text-display text-[10px] tracking-[0.5em] text-wine/40 mb-8 uppercase">The Venue</h3>
-                  <p className="text-serif text-4xl mb-4 text-wine font-light uppercase">Bhaskaran Kalyana Mahal</p>
-                  <p className="text-serif text-lg text-wine/60 italic font-serif">V.E. Road, Thoothukudi</p>
-                  <div className="mt-8 pt-8 border-t border-gold/10">
-                    <a href="https://maps.app.goo.gl/tuticorin" target="_blank" className="text-xs text-rose uppercase tracking-widest hover:underline">Get Directions</a>
-                  </div>
-                </div>
-              </ScrollReveal>
-            </section>
-
-            {/* Hosts Section */}
-            <section className="w-full relative py-16 md:py-32 px-6 md:px-12 bg-white/40 backdrop-blur-xl border-y border-white/60 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] max-w-7xl mx-auto rounded-[2rem] md:rounded-3xl">
-              <div className="text-center mb-12 md:mb-16">
-                <h2 className="text-luxury text-3xl md:text-4xl mb-4">Our Loving Family</h2>
-                <div className="w-24 h-px bg-gold/30 mx-auto" />
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 px-2 md:px-12">
-                <div>
-                  <h4 className="text-wine font-bold uppercase tracking-[0.3em] text-xs mb-8">Groom's Representatives</h4>
-                  <ul className="space-y-4 text-wine/70 font-serif italic text-lg opacity-80">
-                    <li>K.S. Velsamy & Kuzhalvaai Mozhi</li>
-                    <li>K.S. Kalimuthu & Murugalakshmi</li>
-                    <li>K.S. Gomathinayagam & Ramalakshmi</li>
-                    <li>K.S. Marimuthu & Muthumari</li>
-                    <li>K.S. Manikandan & Sankaraselvi</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="text-wine font-bold uppercase tracking-[0.3em] text-xs mb-8">Bride's Representatives</h4>
-                  <ul className="space-y-4 text-wine/70 font-serif italic text-lg opacity-80">
-                    <li>S. Chermakumar & Padmavathi</li>
-                    <li>S. Senthil Arumugam & Vadivu Kala</li>
-                    <li>S. Balakrishnan, B.E. (COMCAST, Chennai)</li>
-                    <li>S. Sakthi Balakrishnan, B.Sc.</li>
-                    <li>S. Malliga Durga, B.E.</li>
-                  </ul>
-                </div>
-              </div>
-            </section>
-
-            {/* Business Partners Section */}
-            <section className="py-16 md:py-24 w-full max-w-5xl mx-auto px-6 text-center relative z-20">
-              <ScrollReveal>
-                <div className="p-8 md:p-12 border border-white/60 bg-white/40 backdrop-blur-xl rounded-[2rem] md:rounded-[3rem] shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]">
-                  <h4 className="text-[10px] uppercase tracking-[0.5em] text-wine/30 mb-8">Special Thanks to</h4>
-                  <div className="flex flex-wrap justify-center gap-12 text-wine/60 font-serif italic text-xl">
-                    <span>Meena Jewellers</span>
-                    <span className="text-gold/30">•</span>
-                    <span>Sri Malliga Jewellers</span>
-                    <span className="text-gold/30">•</span>
-                    <span>APK Groups</span>
-                    <span className="text-gold/30">•</span>
-                    <span>Mahes Jewellers</span>
-                  </div>
-                </div>
-              </ScrollReveal>
-            </section>
-
-            {/* Motif Section */}
-            <section className="w-full relative py-24 md:py-48 px-6">
-              <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-center">
+              {/* Invitation Message */}
+              <section className="py-32 md:py-64 px-6 max-w-5xl text-center relative z-20 mx-auto">
                 <ScrollReveal>
-                  <div className="relative p-8 md:p-16 border border-white/60 bg-white/40 backdrop-blur-xl rounded-[2rem] md:rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] overflow-hidden">
-                    <div className="absolute top-0 right-0 p-4 md:p-8 opacity-5">
-                      <img src={branchTL} alt="decor" className="w-32 h-32 md:w-64 md:h-64 mix-blend-multiply" />
+                  <div className="p-8 md:p-24 border border-white/60 bg-white/40 backdrop-blur-xl rounded-[2rem] md:rounded-[3rem] shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]">
+                    <div className="mb-16">
+                      <div className="w-16 h-px bg-gold/30 mx-auto mb-8" />
+                      <h2 className="text-display text-4xl text-wine mb-12 tracking-[0.3em] uppercase">Artistic Union</h2>
                     </div>
-                    <h2 className="text-luxury text-4xl md:text-6xl mb-8 md:mb-12">Sacred <br /> Beginnings</h2>
-                    <p className="text-serif text-xl leading-relaxed text-wine/70 italic">
-                      As we exchange our vows in the coastal breeze of Thoothukudi,
-                      we invite you to witness the sparkle of our new beginning.
-                      Enriched by tradition and guided by love, this ceremony marks the first step of our eternal journey.
+                    <p className="text-serif text-2xl md:text-4xl leading-relaxed text-wine/80 font-light italic px-8">
+                      "With the blessings of the Almighty, the engagement ceremony of our beloved children has been arranged."
+                      <br /><br />
+                      We cordially invite you and your family to grace the occasion and bless the couple as they begin their journey together.
                     </p>
-                    <motion.div
-                      className="mt-12 flex items-center gap-4 text-wine font-display tracking-widest text-xs uppercase"
-                    >
-                      Blessings of the Divine <Heart size={16} className="text-rose" />
-                    </motion.div>
+                    <div className="w-16 h-px bg-gold/30 mx-auto mt-16" />
+                  </div>
+                </ScrollReveal>
+              </section>
+
+              <EpicScrollSection />
+              <RoyalDecorativeSection />
+
+              {/* Ancestry Section */}
+              <section className="py-16 md:py-32 w-full max-w-7xl px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 relative z-20">
+                <ScrollReveal>
+                  <div className="p-8 md:p-12 border border-white/60 bg-white/40 backdrop-blur-xl rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]">
+                    <h3 className="text-luxury text-2xl md:text-3xl mb-8">The Groom's Side</h3>
+                    <p className="text-wine text-xl font-bold mb-4">K.S.K. Ramasubramanian, B.Com</p>
+                    <div className="space-y-6 text-wine/70 text-sm leading-relaxed">
+                      <div>
+                        <p className="uppercase tracking-widest text-[10px] opacity-60 mb-2">Parents</p>
+                        <p className="text-base">Mr. K.S. Kalimuthu Achari & Mrs. Murugalakshmi</p>
+                      </div>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <p className="uppercase tracking-widest text-[10px] opacity-60 mb-2">Paternal Grandparents</p>
+                          <p>Late Mr. K. Subbaiah Achari & Mrs. Meenakshi Ammal (Sankarankovil)</p>
+                        </div>
+                        <div>
+                          <p className="uppercase tracking-widest text-[10px] opacity-60 mb-2">Maternal Grandparents</p>
+                          <p>Late Mr. P. Ramasamy Achari & Mrs. Sellammal (Kovilpatti)</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </ScrollReveal>
 
                 <ScrollReveal>
-                  <div className="aspect-[3/4] max-w-md mx-auto rounded-t-full overflow-hidden border-4 border-white shadow-2xl group">
-                    <img
-                      src={coupleImg}
-                      alt="Wedding Moment"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
-                    />
+                  <div className="p-8 md:p-12 border border-white/60 bg-white/40 backdrop-blur-xl rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]">
+                    <h3 className="text-luxury text-2xl md:text-3xl mb-8">The Bride's Side</h3>
+                    <p className="text-wine text-xl font-bold mb-4">S. Mallika Priyadharshini, M.Sc</p>
+                    <div className="space-y-6 text-wine/70 text-sm leading-relaxed">
+                      <div>
+                        <p className="uppercase tracking-widest text-[10px] opacity-60 mb-2">Parents</p>
+                        <p className="text-base">Mr. S. Chermakumar & Mrs. S. Padmavathi</p>
+                      </div>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <p className="uppercase tracking-widest text-[10px] opacity-60 mb-2">Paternal Grandparents</p>
+                          <p>Mr. A. Paul Achari & Mrs. Mallika Ammal (Udangudi)</p>
+                        </div>
+                        <div>
+                          <p className="uppercase tracking-widest text-[10px] opacity-60 mb-2">Maternal Grandparents</p>
+                          <p>Mr. M. Shanmugavel Achari & Mrs. Vijayalakshmi Ammal (Coimbatore)</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </ScrollReveal>
-              </div>
-            </section>
+              </section>
 
-            {/* RSVP / Short Version Section */}
-            <section className="py-32 md:py-64 w-full flex justify-center px-6 relative z-20">
-              <ScrollReveal>
-                <div className="max-w-4xl w-full border border-white/60 p-8 md:p-32 bg-white/50 backdrop-blur-2xl relative rounded-[2rem] md:rounded-[3rem] shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]">
-                  <div className="absolute top-6 md:top-12 left-1/2 -translate-x-1/2 flex items-center gap-4 text-wine/30">
-                    <div className="w-8 md:w-12 h-px bg-current" />
-                    <Sparkles size={14} />
-                    <div className="w-8 md:w-12 h-px bg-current" />
-                  </div>
-
-                  <div className="text-center mt-4 md:mt-0 mb-12 md:mb-20">
-                    <h2 className="text-display text-3xl md:text-5xl text-wine mb-4 md:mb-8 tracking-[0.2em] font-light uppercase">Contact Us</h2>
-                    <div className="space-y-2 text-wine/60 font-bold tracking-widest">
-                      <p>94431 24837</p>
-                      <p>94430 24226</p>
-                      <p>96293 68626</p>
+              {/* Event Details Grid */}
+              <section className="py-16 md:py-32 w-full max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-3 gap-12 relative z-20">
+                <ScrollReveal>
+                  <div className="h-full border border-white/60 p-8 md:p-12 bg-white/40 backdrop-blur-xl rounded-[2rem] md:rounded-tr-[5rem] md:rounded-bl-[5rem] shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] group hover:bg-white/50 transition-all duration-700">
+                    <Calendar className="text-wine mb-8 w-10 h-10 opacity-30 group-hover:opacity-100 transition-opacity" />
+                    <h3 className="text-display text-[10px] tracking-[0.5em] text-wine/40 mb-8 uppercase">Ceremony Date</h3>
+                    <p className="text-serif text-5xl mb-4 text-wine font-light uppercase">May 13</p>
+                    <p className="text-serif text-lg text-wine/60 italic font-serif">Wednesday, 2026</p>
+                    <div className="mt-8 pt-8 border-t border-gold/10 text-[10px] uppercase tracking-widest text-wine/40 leading-loose">
+                      Tamil Year: Parabhava<br />Month: Chithirai<br />Star: Uthirattathi
                     </div>
                   </div>
+                </ScrollReveal>
 
-                  <form className="space-y-16 max-w-xl mx-auto">
-                    <input
-                      type="text"
-                      placeholder="FULL NAME"
-                      className="w-full bg-transparent border-b border-wine/10 py-6 text-xl text-center focus:outline-none focus:border-wine/40 transition-colors text-wine placeholder:text-wine/20 uppercase tracking-[0.3em] font-light"
-                    />
+                <ScrollReveal>
+                  <div className="h-full border border-white/60 p-8 md:p-12 bg-white/40 backdrop-blur-xl rounded-[2rem] md:rounded-tl-[5rem] md:rounded-br-[5rem] shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] group hover:bg-white/50 transition-all duration-700">
+                    <Clock className="text-wine mb-8 w-10 h-10 opacity-30 group-hover:opacity-100 transition-opacity" />
+                    <h3 className="text-display text-[10px] tracking-[0.5em] text-wine/40 mb-8 uppercase">Auspicious Time</h3>
+                    <p className="text-serif text-5xl mb-4 text-wine font-light uppercase">7:00 PM</p>
+                    <p className="text-serif text-lg text-wine/60 italic font-serif">Vrischika Lagnam</p>
+                    <div className="mt-8 pt-8 border-t border-gold/10 text-[10px] uppercase tracking-widest text-wine/40 leading-loose">
+                      Thithi: Dwadashi<br />Yogam: Siddha Yogam<br />Between 7:00 - 8:15 PM
+                    </div>
+                  </div>
+                </ScrollReveal>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                      <select className="w-full bg-transparent border-b border-wine/10 py-6 text-base text-center appearance-none cursor-pointer text-wine/80 uppercase tracking-[0.2em] font-light">
-                        <option>1 GUEST</option>
-                        <option>2 GUESTS</option>
-                        <option>FAMILY</option>
-                      </select>
-                      <select className="w-full bg-transparent border-b border-wine/10 py-6 text-base text-center appearance-none cursor-pointer text-wine/80 uppercase tracking-[0.2em] font-light">
-                        <option>ATTENDING</option>
-                        <option>REGRETFULLY ABSENT</option>
-                      </select>
+                <ScrollReveal>
+                  <div className="h-full border border-white/60 p-8 md:p-12 bg-white/40 backdrop-blur-xl rounded-[2rem] md:rounded-tr-[5rem] md:rounded-bl-[5rem] shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] group hover:bg-white/50 transition-all duration-700">
+                    <MapPin className="text-wine mb-8 w-10 h-10 opacity-30 group-hover:opacity-100 transition-opacity" />
+                    <h3 className="text-display text-[10px] tracking-[0.5em] text-wine/40 mb-8 uppercase">The Venue</h3>
+                    <p className="text-serif text-4xl mb-4 text-wine font-light uppercase">Bhaskaran Kalyana Mahal</p>
+                    <p className="text-serif text-lg text-wine/60 italic font-serif">V.E. Road, Thoothukudi</p>
+                    <div className="mt-8 pt-8 border-t border-gold/10">
+                      <a href="https://maps.app.goo.gl/tuticorin" target="_blank" className="text-xs text-rose uppercase tracking-widest hover:underline">Get Directions</a>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              </section>
+
+              {/* Hosts Section */}
+              <section className="w-full relative py-16 md:py-32 px-6 md:px-12 bg-white/40 backdrop-blur-xl border-y border-white/60 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] max-w-7xl mx-auto rounded-[2rem] md:rounded-3xl">
+                <div className="text-center mb-12 md:mb-16">
+                  <h2 className="text-luxury text-3xl md:text-4xl mb-4">Our Loving Family</h2>
+                  <div className="w-24 h-px bg-gold/30 mx-auto" />
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 px-2 md:px-12">
+                  <div>
+                    <h4 className="text-wine font-bold uppercase tracking-[0.3em] text-xs mb-8">Groom's Representatives</h4>
+                    <ul className="space-y-4 text-wine/70 font-serif italic text-lg opacity-80">
+                      <li>K.S. Velsamy & Kuzhalvaai Mozhi</li>
+                      <li>K.S. Kalimuthu & Murugalakshmi</li>
+                      <li>K.S. Gomathinayagam & Ramalakshmi</li>
+                      <li>K.S. Marimuthu & Muthumari</li>
+                      <li>K.S. Manikandan & Sankaraselvi</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-wine font-bold uppercase tracking-[0.3em] text-xs mb-8">Bride's Representatives</h4>
+                    <ul className="space-y-4 text-wine/70 font-serif italic text-lg opacity-80">
+                      <li>S. Chermakumar & Padmavathi</li>
+                      <li>S. Senthil Arumugam & Vadivu Kala</li>
+                      <li>S. Balakrishnan, B.E. (COMCAST, Chennai)</li>
+                      <li>S. Sakthi Balakrishnan, B.Sc.</li>
+                      <li>S. Mallika Durga, B.E.</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              {/* Business Partners Section */}
+              <section className="py-16 md:py-24 w-full max-w-5xl mx-auto px-6 text-center relative z-20">
+                <ScrollReveal>
+                  <div className="p-8 md:p-12 border border-white/60 bg-white/40 backdrop-blur-xl rounded-[2rem] md:rounded-[3rem] shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]">
+                    <h4 className="text-[10px] uppercase tracking-[0.5em] text-wine/30 mb-8">Special Thanks to</h4>
+                    <div className="flex flex-wrap justify-center gap-12 text-wine/60 font-serif italic text-xl">
+                      <span>Meena Jewellers</span>
+                      <span className="text-gold/30">•</span>
+                      <span>Sri Mallika Jewellers</span>
+                      <span className="text-gold/30">•</span>
+                      <span>APK Groups</span>
+                      <span className="text-gold/30">•</span>
+                      <span>Mahes Jewellers</span>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              </section>
+
+              {/* Motif Section */}
+              <section className="w-full relative py-24 md:py-48 px-6">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-center">
+                  <ScrollReveal>
+                    <div className="relative p-8 md:p-16 border border-white/60 bg-white/40 backdrop-blur-xl rounded-[2rem] md:rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] overflow-hidden">
+                      <div className="absolute top-0 right-0 p-4 md:p-8 opacity-5">
+                        <img src={branchTL} alt="decor" className="w-32 h-32 md:w-64 md:h-64 mix-blend-multiply" />
+                      </div>
+                      <h2 className="text-luxury text-4xl md:text-6xl mb-8 md:mb-12">Sacred <br /> Beginnings</h2>
+                      <p className="text-serif text-xl leading-relaxed text-wine/70 italic">
+                        As we exchange our vows in the coastal breeze of Thoothukudi,
+                        we invite you to witness the sparkle of our new beginning.
+                        Enriched by tradition and guided by love, this ceremony marks the first step of our eternal journey.
+                      </p>
+                      <motion.div
+                        className="mt-12 flex items-center gap-4 text-wine font-display tracking-widest text-xs uppercase"
+                      >
+                        Blessings of the Divine <Heart size={16} className="text-rose" />
+                      </motion.div>
+                    </div>
+                  </ScrollReveal>
+
+                  <ScrollReveal>
+                    <div className="aspect-[3/4] max-w-md mx-auto rounded-t-full overflow-hidden border-4 border-white shadow-2xl group">
+                      <img
+                        src={coupleImg}
+                        alt="Wedding Moment"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
+                      />
+                    </div>
+                  </ScrollReveal>
+                </div>
+              </section>
+
+              {/* RSVP / Short Version Section */}
+              <section className="py-32 md:py-64 w-full flex justify-center px-6 relative z-20">
+                <ScrollReveal>
+                  <div className="max-w-4xl w-full border border-white/60 p-8 md:p-32 bg-white/50 backdrop-blur-2xl relative rounded-[2rem] md:rounded-[3rem] shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]">
+                    <div className="absolute top-6 md:top-12 left-1/2 -translate-x-1/2 flex items-center gap-4 text-wine/30">
+                      <div className="w-8 md:w-12 h-px bg-current" />
+                      <Sparkles size={14} />
+                      <div className="w-8 md:w-12 h-px bg-current" />
                     </div>
 
-                    <motion.button
-                      whileHover={{ backgroundColor: "#800020", color: "white" }}
-                      className="w-full border-2 border-wine/20 text-wine py-8 uppercase tracking-[0.6em] transition-all duration-700 text-xs font-bold rounded-full"
-                    >
-                      Send Blessing
-                    </motion.button>
-                  </form>
-                </div>
-              </ScrollReveal>
-            </section>
+                    <div className="text-center mt-4 md:mt-0 mb-12 md:mb-20">
+                      <h2 className="text-display text-3xl md:text-5xl text-wine mb-4 md:mb-8 tracking-[0.2em] font-light uppercase">Contact Us</h2>
+                      <div className="space-y-2 text-wine/60 font-bold tracking-widest">
+                        <p>94431 24837</p>
+                        <p>94430 24226</p>
+                        <p>96293 68626</p>
+                      </div>
+                    </div>
 
-            {/* Footer */}
-            <footer className="py-24 md:py-48 w-full max-w-5xl mx-auto px-6 block text-center relative z-20">
-              <ScrollReveal>
-                <div className="p-8 md:p-24 border border-white/60 bg-white/40 backdrop-blur-xl rounded-[2rem] md:rounded-[3rem] shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]">
-                  <div className="text-luxury text-2xl md:text-3xl mb-4 italic opacity-80">Ramasubramanian <br className="block md:hidden" />& Malliga Priyadharshini</div>
-                  <p className="text-[8px] md:text-[10px] tracking-[0.8em] md:tracking-[1.2em] text-wine/40 uppercase mb-8 ml-[0.8em] md:ml-[1.2em]">Sacred Union • Eternal Joy</p>
-                  <div className="flex justify-center gap-8 md:gap-12 text-rose/40">
-                    <Music size={20} />
-                    <Heart size={20} fill="currentColor" />
-                    <Sparkles size={20} />
+                    <form className="space-y-16 max-w-xl mx-auto">
+                      <input
+                        type="text"
+                        placeholder="FULL NAME"
+                        className="w-full bg-transparent border-b border-wine/10 py-6 text-xl text-center focus:outline-none focus:border-wine/40 transition-colors text-wine placeholder:text-wine/20 uppercase tracking-[0.3em] font-light"
+                      />
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <select className="w-full bg-transparent border-b border-wine/10 py-6 text-base text-center appearance-none cursor-pointer text-wine/80 uppercase tracking-[0.2em] font-light">
+                          <option>1 GUEST</option>
+                          <option>2 GUESTS</option>
+                          <option>FAMILY</option>
+                        </select>
+                        <select className="w-full bg-transparent border-b border-wine/10 py-6 text-base text-center appearance-none cursor-pointer text-wine/80 uppercase tracking-[0.2em] font-light">
+                          <option>ATTENDING</option>
+                          <option>REGRETFULLY ABSENT</option>
+                        </select>
+                      </div>
+
+                      <motion.button
+                        whileHover={{ backgroundColor: "#800020", color: "white" }}
+                        className="w-full border-2 border-wine/20 text-wine py-8 uppercase tracking-[0.6em] transition-all duration-700 text-xs font-bold rounded-full"
+                      >
+                        Send Blessing
+                      </motion.button>
+                    </form>
                   </div>
-                  <div className="mt-12 md:mt-24 flex justify-center gap-16 md:gap-32 opacity-10">
-                    <img src={petalImg} className="w-8 h-8 md:w-12 md:h-12 mix-blend-multiply" />
-                    <img src={petalImg} className="w-8 h-8 md:w-12 md:h-12 mix-blend-multiply -scale-x-100" />
+                </ScrollReveal>
+              </section>
+
+              {/* Footer */}
+              <footer className="py-24 md:py-48 w-full max-w-5xl mx-auto px-6 block text-center relative z-20">
+                <ScrollReveal>
+                  <div className="p-8 md:p-24 border border-white/60 bg-white/40 backdrop-blur-xl rounded-[2rem] md:rounded-[3rem] shadow-[0_8px_32px_0_rgba(0,0,0,0.05)]">
+                    <div className="text-luxury text-2xl md:text-3xl mb-4 italic opacity-80">Ramasubramanian <br className="block md:hidden" />& Mallika Priyadharshini</div>
+                    <p className="text-[8px] md:text-[10px] tracking-[0.8em] md:tracking-[1.2em] text-wine/40 uppercase mb-8 ml-[0.8em] md:ml-[1.2em]">Sacred Union • Eternal Joy</p>
+                    <div className="flex justify-center gap-8 md:gap-12 text-rose/40">
+                      <Music size={20} />
+                      <Heart size={20} fill="currentColor" />
+                      <Sparkles size={20} />
+                    </div>
+                    <div className="mt-12 md:mt-24 flex justify-center gap-16 md:gap-32 opacity-10">
+                      <img src={petalImg} className="w-8 h-8 md:w-12 md:h-12 mix-blend-multiply" />
+                      <img src={petalImg} className="w-8 h-8 md:w-12 md:h-12 mix-blend-multiply -scale-x-100" />
+                    </div>
                   </div>
-                </div>
-              </ScrollReveal>
-            </footer>
+                </ScrollReveal>
+              </footer>
 
-          </main>
+            </main>
 
-          <style>{`
+            <style>{`
         .vertical-text {
           writing-mode: vertical-rl;
           text-orientation: mixed;
         }
       `}</style>
 
-          <motion.div
-            className="fixed top-0 left-0 right-0 h-1 bg-rose z-[100] origin-left shadow-[0_0_10px_rgba(229,115,115,0.5)]"
-            style={{ scaleX: scrollYProgress }}
-          />
-        </motion.div>
-      )}
-    </AnimatePresence>
+            <motion.div
+              className="fixed top-0 left-0 right-0 h-1 bg-rose z-[100] origin-left shadow-[0_0_10px_rgba(229,115,115,0.5)]"
+              style={{ scaleX: scrollYProgress }}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
